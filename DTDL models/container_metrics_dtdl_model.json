@@ -1,0 +1,39 @@
+{
+  "@id": "dtmi:example:MeshMetrics;1",
+  "@type": "Interface",
+  "displayName": "3D Mesh Metrics",
+  "@context": "dtmi:dtdl:context;2",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "height",
+      "displayName": "Object Height",
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "boundingBox",
+      "displayName": "Bounding Box Dimensions",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {"name": "width", "schema": "double"},
+          {"name": "length", "schema": "double"},
+          {"name": "height", "schema": "double"}
+        ]
+      }
+    },
+    {
+      "@type": "Property",
+      "name": "timestamp",
+      "displayName": "Last Updated",
+      "schema": "dateTime"
+    },
+    {
+      "@type": "Relationship",
+      "name": "contains",
+      "displayName": "Contains another container",
+      "target": "dtmi:example:MeshMetrics;1"
+    }
+  ]
+}
