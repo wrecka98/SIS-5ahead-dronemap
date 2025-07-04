@@ -22,6 +22,7 @@ twin_data = {
 
 
 
+
 with open("DTDL models/mesh_metrics_values.json", "w") as f:
     json.dump(twin_data, f, indent=2)
 
